@@ -1,0 +1,7 @@
+"""
+解決VS Code安裝Code Runner插件後，輸出窗口中文亂碼問題（Python）
+在 python 代碼的開頭加上以下代碼:
+"""
+import io
+import sys
+sys.stdout=io.TextIOWrapper(sys.stdout.buffer,encoding='utf8')
